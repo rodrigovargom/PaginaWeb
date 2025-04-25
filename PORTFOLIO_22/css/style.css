@@ -1,0 +1,409 @@
+/* Reseteamos propiedades de CSS que añade el navegador a ciertos elementos del HTML */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    color: grey;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 80px;
+    line-height: 80px;
+    font-weight: bold;
+    transform: skew(-15deg);
+}
+
+/* Para que las imagenes se adapten al tamaño del elemento que las contiene */
+img {
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+/* body {
+    background-color: aqua;
+} */
+
+.wrapper {
+    /* Ancha máximo, si la pantalla es más pequeña el elemento se redimensiona */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 0;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+}
+
+.menu ul li a {
+    font-weight: bold;
+    color: grey;
+    display: block;
+    transition: 0.3s;
+}
+
+.menu ul li a:hover {
+    color: blueviolet;
+    /* font-size: 24px; */
+    transform: scale(1.15) rotate(10deg);
+}
+
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 182px;
+    row-gap: 40px;
+    padding: 80px 0;
+}
+
+header > div {
+    flex: 1;
+    width: 50%;
+}
+
+/* Contenedor de los textos */
+header > div:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+}
+
+/* Contenedor de la imagen */
+header > div:last-child {
+    border: 1px blueviolet solid;
+    padding: 40px;
+    border-radius: 50%;
+    height: fit-content;
+    min-width: 380px;
+    max-width: 564px;
+}
+
+header > div:last-child > img {
+    border-radius: 50%;
+}
+
+
+/* BOTONES */
+.btn-group {
+    display: flex;
+    gap: 24px;
+}
+
+/* Propiedades comunes a los 2 botones */
+.btn-group > a {
+    padding: 8px 12px;
+    font-weight: bold;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: .3s;
+}
+
+.btn-group > a:first-child {
+    background-color: blueviolet;
+    color: aliceblue;
+}
+
+.btn-group > a:last-child {
+    border: 1px black solid;
+    color: black;
+}
+
+/* Este selector solo se activa cuando ocurre el hover */
+.btn-group > a:first-child:hover {
+    background-color: rgb(72, 7, 133);
+}
+
+.btn-group > a:last-child:hover {
+    color: aliceblue;
+    background-color: black;
+}
+
+
+
+/* Página flexbox.html */
+.flex-cont {
+    margin-top: 40px;
+    padding: 40px;
+    background-color: rgb(255, 197, 91);
+    border: 2px orange solid;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flex-cont > div {
+    padding: 20px;
+    background-color: rgb(180, 99, 255);
+    border: 2px blueviolet solid;
+    width: 284px;
+}
+
+.flex-cont-second {
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 720px;
+}
+
+.flex-cont-second > div {
+    background-color: chartreuse;
+    width: 124px;
+    height: 124px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* SECCION PROYECTOS */
+#projects {
+    margin: 80px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+#projects > .pro-row {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Este selector afecta a todas columnas */
+#projects > .pro-row > .col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* min-width: 320px; */
+}
+
+#projects > .pro-row > .small-col {
+    /* width: 40%; */ 
+    flex: 1;
+    min-width: 300px;
+}
+
+#projects > .pro-row > .big-col {
+    /* width: 60%; */
+    flex: 2;
+    min-width: 680px;
+}
+
+/* Selecciona el contenedor de la imagen */
+#projects > .pro-row > .col > div {
+    height: 300px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#projects > .pro-row > .col > div > img {
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* OVERLAY */
+#projects > .pro-row > .col > div {
+    position: relative;
+}
+
+/* Este elemento está posicionado de forma absoluta y será relativo al elemento contenedor que tenga la propiedad -> position: relative */
+#projects > .pro-row > .col > div > .overlay {
+    background-color: rgba(137, 43, 226, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    font-size: 24px;
+    font-weight: bold;
+    opacity: 0;
+    transition: .6s;
+}
+
+#projects > .pro-row > .col > div > .overlay:hover {
+    opacity: 1;
+}
+
+
+
+/* SKILLS */
+#skills {
+    margin: 80px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#skills > .skills-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Selecciona 4 columnas */
+#skills > .skills-row > .skills-col {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+
+/* FOOTER  */
+footer {
+    margin: 80px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+footer > .f-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer > .f-row > .social-icons {
+    display: flex;
+    gap: 24px;
+    font-size: 24px;
+}
+
+footer > .f-row > .btn-group {
+    align-items: flex-end;
+}
+
+footer > .f-row > .copyright {
+    text-align: right;
+}
+
+
+/* gallery.html */
+#gallery > ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+#gallery > ul > li {
+    height: 25vh;
+    flex-grow: 1;
+}
+
+#gallery > ul > li > img {
+    max-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+}
+
+
+.only-mobile {
+    display: none;
+}
+
+
+
+
+/* MEDIA QUERIES */
+
+/* Este media query se activará cuando la pantalla del usuario se MENOR QUE 824px */
+
+/* Tamaño tablet o M */
+@media screen and (max-width: 824px) {
+    
+    /* body {
+        background-color: yellowgreen;
+    } */
+
+    h1 {
+        font-size: 48px;
+        line-height: normal;
+    }
+
+    .only-desktop {
+        display: none;
+    }
+
+    .wrapper {
+        padding: 0 20px;
+    }
+
+    header > div:last-child {
+        min-width: 100%;
+        padding: 20px;
+    }
+
+    #projects > .pro-row > .big-col,
+    #projects > .pro-row > .small-col {
+        min-width: 100%;
+    }
+
+    #skills > .skills-row > .skills-col {
+        padding-bottom: 40px;
+        width: 50%;
+    }
+
+    footer > .f-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer > .f-row > .copyright {
+        text-align: center;
+        padding-top: 40px;
+    }
+
+}
+
+
+/* Tamaño mobile o S */
+@media screen and (max-width: 480px) {
+
+    /* body {
+        background-color: pink;
+    } */
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .only-mobile {
+        display: block;
+    }
+    
+
+    .wrapper {
+        padding: 0 10px;
+    }
+
+    #skills > .skills-row > .skills-col {
+        width: 100%;
+    }
+
+    /* Corrige altura de li de la galería */
+    #gallery > ul > li {
+        height: auto;
+    }
+
+}

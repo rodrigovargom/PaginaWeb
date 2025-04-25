@@ -2,43 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
     <title>Página con Imágenes</title>
-    <style>
-        /* Estilo básico para las imágenes */
-        .image-container {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
-        .image-container img {
-            width: 200px;
-            height: auto;
-            cursor: pointer;
-            margin: 10px;
-            border: 2px solid #ccc;
-            border-radius: 10px;
-            transition: transform 0.3s, border-color 0.3s;
-        }
-        .image-container img:hover {
-            transform: scale(1.1);
-            border-color: #007BFF;
-        }
-    </style>
+    
 </head>
 <body>
     <h1>Selecciona una opción</h1>
     <div class="image-container">
-        <!-- Imagen 1 -->
-        <img src="imagen1.jpg" alt="Imagen 1" onclick="window.location.href='pagina1.html'">
-        <!-- Imagen 2 -->
-        <img src="imagen2.jpg" alt="Imagen 2" onclick="window.location.href='pagina2.html'">
-        <!-- Imagen 3 -->
-        <img src="imagen3.jpg" alt="Imagen 3" onclick="window.location.href='pagina3.html'">
-        <!-- Imagen 4 -->
-        <img src="imagen4.jpg" alt="Imagen 4" onclick="window.location.href='pagina4.html'">
+    
     </div>
+    <section id="gallery">
+        <ul>
+        <li>
+            <img src="imagen1.jpg" alt="Imagen 1" onclick="window.location.href='pagina1.html'">
+        </li>
+    </ul>
+    </section>
 </body>
 </html>
