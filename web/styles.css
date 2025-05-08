@@ -1,0 +1,187 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  background-color: #1b1b1b;
+}
+
+h1 {
+    margin: 30px 0;
+    font-size: 5.5em;
+    text-align: center;
+    color: #ffffff;
+}
+h3 {
+    font-size: 1.5em;
+    text-align: center;
+    padding-inline: 420px;
+    
+    color: #ffffff;
+}
+h2 {
+    font-size: 4.3em;
+    text-align: center;
+    color: #ffffff;
+}
+.image-container {
+    padding-top: 15px;
+    padding-bottom: 80px;
+    display: flex;
+    justify-content: center;
+   
+}
+
+.image-container img {
+    width: 700px;
+    height: auto;
+    border: 2px solid ;
+    border-radius: 10px;
+    transition: transform 0.3s, border-color 0.3s;
+}
+header {
+    background-color: #333;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #f0a500;
+}
+.text-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.text-button:hover {
+    background-color: #f0a500;
+    color: #000;
+}
+.triangle-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.triangle-link {
+    position: absolute;
+    text-decoration: none;
+    color: #fff;
+    font-size: 4em; /* Tamaño de letra más grande */
+    font-weight: bold; /* Hace que el texto sea más grueso */
+    transition: color 0.3s;
+    text-align: center; /* Centra el texto */
+}
+
+.triangle-link:hover {
+    color: #f0a500;
+}
+
+/* Posiciones para formar el triángulo */
+.triangle-container a:nth-child(1) {
+    
+    top: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.triangle-container a:nth-child(2) {
+    bottom: -500px;
+   
+    left: -220px;
+}
+
+.triangle-container a:nth-child(3) {
+    bottom: -500px;
+   
+    right: -220px;
+}
+@media screen and (max-width: 1400px){
+
+    h2 {
+        
+        font-size: 4.8em;
+    }
+
+    h3 {
+        font-size: 1.1em;
+        padding-inline: 40px;
+    }
+
+   
+ }
+@media screen and (max-width: 824px){
+    h1 {
+        font-size: 3em;
+    }
+    h2 {
+        
+        font-size: 2.5em;
+    }
+    h3 {
+        font-size: 1em;
+        padding-inline: 40px;
+    }
+   .image-container{
+    padding-bottom:30px ;
+    }
+    .image-container img {
+        width: 80%; 
+    }
+ }
+ @media screen and (max-width: 480px){
+    h1 {
+       font-size: 2.5em;
+    }
+    h2 {
+        margin-top: 20px;
+        font-size: 2em;
+    }
+
+    h3 {
+        font-size: 0.75em;
+        padding-inline: 15px;
+    }
+    .image-container{
+        padding-bottom:15px ;
+        }
+    .image-container img {
+        width: 75%;
+    }
+ }
+
