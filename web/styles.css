@@ -1,9 +1,9 @@
 
 body {
-    font-family: Arial, sans-serif;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow ', sans-serif;
     margin: 0;
     padding: 0;
-  background-color: #1b1b1b;
+  background-color: #04002b;
 }
 
 h1 {
@@ -12,15 +12,17 @@ h1 {
     text-align: center;
     color: #ffffff;
 }
+
 h3 {
+    font-family:'Courier New', Courier, monospace;
     font-size: 1.5em;
     text-align: center;
-    padding-inline: 420px;
+    padding-inline: 380px;
     
-    color: #ffffff;
+    color: #ffffff; 
 }
 h2 {
-    font-size: 4.3em;
+    font-size: 4.7em;
     text-align: center;
     color: #ffffff;
 }
@@ -33,7 +35,7 @@ h2 {
 }
 
 .image-container img {
-    width: 700px;
+    width: 1000px;
     height: auto;
     border: 2px solid ;
     border-radius: 10px;
@@ -62,7 +64,7 @@ header nav ul li {
 header nav ul li a {
     text-decoration: none;
     color: #fff;
-    font-size: 1.2em;
+    font-size: 2em;
     transition: color 0.3s;
 }
 
@@ -100,10 +102,11 @@ header nav ul li a:hover {
 
 .triangle-link {
     position: absolute;
+    text-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
     text-decoration: none;
+   
     color: #fff;
     font-size: 4em; /* Tamaño de letra más grande */
-    font-weight: bold; /* Hace que el texto sea más grueso */
     transition: color 0.3s;
     text-align: center; /* Centra el texto */
 }
@@ -133,40 +136,82 @@ header nav ul li a:hover {
 }
 @media screen and (max-width: 1400px){
 
-    h2 {
-        
-        font-size: 4.8em;
+    h1 {
+        margin: 25px 0;
+        font-size: 4.5em;
     }
-
     h3 {
-        font-size: 1.1em;
-        padding-inline: 40px;
+        font-size: 1.25em;
+        text-align: center;
+        padding-inline: 100px;
+        
+        color: #ffffff; 
     }
-
+    h2 {
+        font-size: 4.3em;
+    }
+    .image-container {
+        padding-bottom: 20px;
+    }
+    .image-container img {
+        width: 70%; 
+    }
    
  }
 @media screen and (max-width: 824px){
     h1 {
-        font-size: 3em;
+        font-size: 3.8em;
     }
     h2 {
         
-        font-size: 2.5em;
+        font-size: 3.3em;
     }
     h3 {
         font-size: 1em;
         padding-inline: 40px;
     }
    .image-container{
-    padding-bottom:30px ;
+    padding-bottom:3px ;
     }
     .image-container img {
         width: 80%; 
     }
+    header {
+        padding: 5px 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    header nav ul li {
+        margin: 0 15px;
+    }
+    
+.triangle-container {
+    align-items: center;
+     flex-direction: column;
+     height: auto;
+     transform: none;
+     top: auto;
+     }
+    
+     .triangle-container a {
+        align-content: center;
+     position: static;
+     margin: 20px 0;
+     font-size: 4em;
+     }
+     .triangle-container a:nth-child(1) {
+    
+        top: 300px;
+        left: 0;
+        transform: none;
+    }
+    
  }
  @media screen and (max-width: 480px){
     h1 {
-       font-size: 2.5em;
+       font-size: 2.4em;
     }
     h2 {
         margin-top: 20px;
@@ -174,14 +219,38 @@ header nav ul li a:hover {
     }
 
     h3 {
-        font-size: 0.75em;
+        font-size: 0.65em;
         padding-inline: 15px;
     }
-    .image-container{
-        padding-bottom:15px ;
-        }
+   
     .image-container img {
-        width: 75%;
+        width: 90%;
     }
+    .triangle-container {
+        align-items: center;
+         flex-direction: column;
+         height: auto;
+         transform: none;
+         top: auto;
+         }
+        
+         .triangle-container a {
+            align-content: center;
+         position: static;
+         margin: 20px 0;
+         font-size: 2em;
+         }
+         .triangle-container a:nth-child(1) {
+    
+            top: 300px;
+            left: 0;
+            transform: none;
+        }
+        header nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1em;
+            transition: color 0.3s;
+        }
  }
 
